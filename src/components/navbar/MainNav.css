@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&family=Quicksand&display=swap');
+
+.logo-text {
+  font-family: 'Kanit';
+  font-size: 25px;
+}
+
+.nav-item {
+  font-family: 'Quicksand';
+  font-size: 17px;
+}

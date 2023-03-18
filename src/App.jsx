@@ -1,7 +1,12 @@
+import React from 'react';
+import { RouterProvider } from 'react-router';
+
+import useRoutes from './routes/useRoutes';
 import './App.css';
 
 function App() {
-  return;
+  const { router } = useRoutes();
+  return <RouterProvider router={router} />;
 }
 
 export default App;
