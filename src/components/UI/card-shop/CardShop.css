@@ -1,0 +1,4 @@
+.link {
+  color: #384972;
+  background-image: linear-gradient(transparent calc(100% - 1px), #384972 1px);
+}

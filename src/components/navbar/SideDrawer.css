@@ -1,0 +1,18 @@
+.side-drawer {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  z-index: 50;
+  height: 110%;
+
+  width: 70%;
+  background: var(--mainThemeColor);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  transition: all ease-in-out 200ms;
+}
+
+@media (max-width: 848px) {
+  .side-drawer {
+    width: 100%;
+  }
+}
