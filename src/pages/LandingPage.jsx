@@ -8,7 +8,6 @@ const LandingPage = () => {
       <Hero />
       <HomeSection1 />
       <HomeSection2 />
-      <HomeSection1 />
     </>
   );
 };

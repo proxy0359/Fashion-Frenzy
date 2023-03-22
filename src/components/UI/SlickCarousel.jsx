@@ -1,16 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import LeftArrow from './LeftArrow';
+import RightArrow from './RightArrow';
 
 const SlickCarousel = (props) => {
   const settings = {
-    infinite: true,
-    speed: 500,
     slidesToShow: 4,
-    centerMode: false,
-    swipeToSlide: true,
-    autoplay: true,
 
-    autoplaySpeed: 3000,
+    nextArrow: <LeftArrow />,
+    prevArrow: <RightArrow />,
     responsive: [
       {
         breakpoint: 1200,

@@ -1,12 +1,14 @@
 import React from 'react';
 import section2Video from '../../../assets/background-Videos/section2Video.mp4';
+import SlickCarousel from '../../UI/SlickCarousel';
+import CardShop from '../../UI/card-shop/CardShop';
 import './HomeSection2.css';
 
 import { NavLink } from 'react-router-dom';
 
 const HomeSection2 = () => {
   return (
-    <div className="grid-cols-12 pb-14 lg:pb-18 mx-auto m-w-[1800px]">
+    <section className="grid-cols-12 pb-14 lg:pb-18 mx-auto m-w-[1800px]">
       <div className="flex items-end md:items-center col-span-4 md:col-span-12 h-[40rem] md:h-160 xl:h-202 relative">
         <div className="flex-shrink-0">
           <video
@@ -39,7 +41,47 @@ const HomeSection2 = () => {
           </div>
         </div>
       </div>
-    </div>
+
+      <section className="overflow-hidden  mt-4">
+        <div className="grid grid-cols-12 gap-4  ml-10">
+          <div className="col-span-8 max-md:col-span-9 max-sm:col-span-11">
+            <h1 className=" mb-3 md:mb-5 max-md:text-[2rem] max-sm:text-[1.5rem]">
+              Fashion Frenzy Favorites
+            </h1>
+          </div>
+        </div>
+
+        {/* CAROUSEL FOR PRODUCTS */}
+        <div className=" w-full py-4 mb-10 h-full max-sm:mb-4 ">
+          <SlickCarousel>
+            <CardShop
+              tagVersion={true}
+              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
+              tags={[{ title: 'Best Seller' }]}
+              price={6750}
+            />
+            <CardShop
+              tagVersion={true}
+              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
+              tags={[{ title: 'Best Seller' }, { title: 'New Arrivals' }]}
+              price={5340}
+            />
+            <CardShop
+              tagVersion={true}
+              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
+              tags={[{ title: 'Best Seller' }]}
+              price={4560}
+            />
+            <CardShop
+              tagVersion={true}
+              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
+              tags={[{ title: 'Best Seller' }]}
+              price={3450}
+            />
+          </SlickCarousel>
+        </div>
+      </section>
+    </section>
   );
 };
 

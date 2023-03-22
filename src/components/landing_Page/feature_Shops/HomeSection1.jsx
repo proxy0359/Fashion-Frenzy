@@ -13,11 +13,13 @@ const HomeSection1 = () => {
           </h1>
         </div>
       </div>
-      <div className=" w-full py-4 mb-10 h-full max-sm:m-auto">
+      <div className="  w-full py-4 mb-10 h-full max-sm:mb-3  ">
         <SlickCarousel>
           <CardShop category="Men's" />
           <CardShop category="Women's" />
           <CardShop category="Changing Robes" />
+          <CardShop category="New Arrivals" />
+          <CardShop category="New Arrivals" />
           <CardShop category="New Arrivals" />
         </SlickCarousel>
       </div>

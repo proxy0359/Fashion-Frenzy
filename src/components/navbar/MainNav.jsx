@@ -23,9 +23,9 @@ const MainNav = () => {
         </>
       ) : null}
 
-      <nav className="flex nav max-lg:justify-between ">
-        <NavLink to="/" className="flex-shrink-0">
-          <h1 className=" block shrink-0 bg-black text-white p-5 px-7 mr-10 logo-text cursor-pointer ">
+      <nav className="flex nav max-lg:justify-between  ">
+        <NavLink to="/" className=" max-sm:!flex-shrink shrink-0 ">
+          <h1 className=" block   bg-black text-white p-5 px-7 mr-10 logo-text cursor-pointer ">
             Fashion Frenzy
           </h1>
         </NavLink>
