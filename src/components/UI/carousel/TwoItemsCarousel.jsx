@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import TwoItemsCarouselCard from './TwoItemsCarouselCard';
 import './TwoItemsCarousel.css';
 
 const RightArrow = ({ onClick }) => {
@@ -44,7 +45,7 @@ const TwoItemsCarousel = (props) => {
 
   return (
     <>
-      <Slider className={`${props.className}  max-sm:ml-0`} {...settings}>
+      <Slider className={`${props.className}  max-sm:ml-0 `} {...settings}>
         {props.children}
       </Slider>
     </>
