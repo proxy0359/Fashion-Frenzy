@@ -1,0 +1,15 @@
+.text-responsive {
+  font-size: 3.125rem;
+  line-height: 1.1909090909em;
+  letter-spacing: 0.0303030303em;
+  font-family: Helvetica Neue LT W05_55 Roman, Helvetica, sans-serif;
+}
+
+@media (max-width: 990px) {
+  .text-responsive {
+    font-size: 2rem;
+    line-height: 1.25em;
+    letter-spacing: 0.03125em;
+    font-family: Helvetica Neue LT W05_55 Roman, Helvetica, sans-serif;
+  }
+}

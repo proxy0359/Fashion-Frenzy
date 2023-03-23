@@ -20,7 +20,6 @@ const HomeSection1 = () => {
           <CardShop category="Changing Robes" />
           <CardShop category="New Arrivals" />
           <CardShop category="New Arrivals" />
-          <CardShop category="New Arrivals" />
         </SlickCarousel>
       </div>
     </section>

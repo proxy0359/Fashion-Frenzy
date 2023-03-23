@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 const HomeSection2 = () => {
   return (
     <section className="grid-cols-12 pb-14 lg:pb-18 mx-auto m-w-[1800px]">
-      <div className="flex items-end md:items-center col-span-4 md:col-span-12 h-[40rem] md:h-160 xl:h-202 relative">
+      <div className="flex items-end md:items-center col-span-4 md:col-span-12 h-[40rem] md:h-160 xl:h-202 relative mb-20">
         <div className="flex-shrink-0">
           <video
             src={section2Video}
@@ -71,6 +71,12 @@ const HomeSection2 = () => {
               title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
               tags={[{ title: 'Best Seller' }]}
               price={4560}
+            />
+            <CardShop
+              tagVersion={true}
+              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
+              tags={[{ title: 'Best Seller' }]}
+              price={3450}
             />
             <CardShop
               tagVersion={true}

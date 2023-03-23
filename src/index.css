@@ -12,6 +12,20 @@ body {
   box-sizing: border-box;
   padding: 0;
   background: #f6f6f6;
+  font-family: Helvetica Neue LT W05_55 Roman, Helvetica, sans-serif;
+}
+
+.h1 {
+  font-size: 3.125rem;
+  line-height: 1.1909090909em;
+  letter-spacing: 0.0303030303em;
+  font-family: Helvetica Neue LT W05_55 Roman, Helvetica, sans-serif;
+}
+.h2 {
+  font-size: 2rem;
+  line-height: 1.25em;
+  letter-spacing: 0.03125em;
+  font-family: Helvetica Neue LT W05_55 Roman, Helvetica, sans-serif;
 }
 
 main {

@@ -8,8 +8,9 @@ import RightArrow from './RightArrow';
 const SlickCarousel = (props) => {
   const settings = {
     slidesToShow: 4,
+    variableWidth: true,
 
-    nextArrow: <LeftArrow />,
+    nextArrow: <LeftArrow className="top-[35%]" />,
     prevArrow: <RightArrow />,
     responsive: [
       {
@@ -21,7 +22,7 @@ const SlickCarousel = (props) => {
         },
       },
       {
-        breakpoint: 890,
+        breakpoint: 930,
         settings: {
           slidesToShow: 2,
 
@@ -44,7 +45,7 @@ const SlickCarousel = (props) => {
   return (
     <>
       <Slider
-        className={`${props.className} flex ml-10 max-sm:ml-0`}
+        className={`${props.className} flex mx-5 max-sm:ml-0`}
         {...settings}
       >
         {props.children}

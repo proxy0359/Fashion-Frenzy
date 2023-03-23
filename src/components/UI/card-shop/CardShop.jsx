@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const CardShop = ({ category, tagVersion, title, to, price, tags }) => {
   return tagVersion ? (
-    <div className=" w-[280px] h-auto max-sm:m-auto ">
+    <div className=" w-[280px] h-auto max-sm:m-auto mx-3 ">
       <div className=" overflow-hidden">
         {/* IMAGE SHOULD HAVE A PROP  */}
         <img
@@ -38,7 +38,7 @@ const CardShop = ({ category, tagVersion, title, to, price, tags }) => {
       </p>
     </div>
   ) : (
-    <div className="lg:overflow-hidden w-[280px] h-auto max-sm:m-auto ">
+    <div className="lg:overflow-hidden w-[280px] h-auto max-sm:m-auto mx-3 ">
       <div className="hover:scale-105 transform ease-in-out duration-200">
         {/* IMAGE SHOULD HAVE A PROP  */}
         <img src={clothe1} alt="asdf" className="w-[280px] h-[380px] " />

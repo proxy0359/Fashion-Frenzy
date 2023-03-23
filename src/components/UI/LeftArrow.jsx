@@ -2,10 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-const LeftArrow = ({ onClick }) => {
+const LeftArrow = ({ onClick, className }) => {
   return (
     <div
-      className="button bg-[#e7ddbb] w-fit cursor-pointer z-[1] absolute top-[35%]"
+      className={` button bg-[#e7ddbb] w-fit cursor-pointer z-[1] absolute top-[35%] `}
       onClick={onClick}
     >
       <FontAwesomeIcon
