@@ -24,6 +24,7 @@ const RightArrow = ({ onClick }) => {
 const TwoItemsCarousel = (props) => {
   const settings = {
     variableWidth: true,
+    adaptiveHeight: true,
 
     slidesToShow: 1,
 
@@ -31,7 +32,7 @@ const TwoItemsCarousel = (props) => {
 
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 860,
         settings: {
           slidesToShow: 0.5,
 

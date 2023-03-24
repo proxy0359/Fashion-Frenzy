@@ -3,7 +3,7 @@ import './CardShop.css';
 import clothe1 from '../../../assets/heroSection1/image1.jpg';
 import { NavLink } from 'react-router-dom';
 
-const CardShop = ({ category, tagVersion, title, to, price, tags }) => {
+const CardShop = ({ category, tagVersion, title, to, price, tags, img }) => {
   return tagVersion ? (
     <div className=" w-[280px] h-auto max-sm:m-auto mx-3 ">
       <div className=" overflow-hidden">
@@ -41,10 +41,14 @@ const CardShop = ({ category, tagVersion, title, to, price, tags }) => {
     <div className="lg:overflow-hidden w-[280px] h-auto max-sm:m-auto mx-3 ">
       <div className="hover:scale-105 transform ease-in-out duration-200">
         {/* IMAGE SHOULD HAVE A PROP  */}
-        <img src={clothe1} alt="asdf" className="w-[280px] h-[380px] " />
+        <img
+          src={img ? img : clothe1}
+          alt="asdf"
+          className="w-[280px] h-[380px] "
+        />
       </div>
       <div className="mt-2">
-        <p className="mb-2">Shop</p>
+        <p className="mb-2 text-base">{title ? title : 'Shop'}</p>
 
         <NavLink to="/shop/men" className="link text-[1.6rem]">
           {/* TITLE FOR THE CART SHOP EX. (MEN , WOMEN etc...) */}

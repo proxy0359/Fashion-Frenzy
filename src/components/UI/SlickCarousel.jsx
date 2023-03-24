@@ -9,6 +9,7 @@ const SlickCarousel = (props) => {
   const settings = {
     slidesToShow: 4,
     variableWidth: true,
+    infinite: true,
 
     nextArrow: <LeftArrow className="top-[35%]" />,
     prevArrow: <RightArrow />,
@@ -24,7 +25,7 @@ const SlickCarousel = (props) => {
       {
         breakpoint: 930,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
 
           infinite: true,
         },
@@ -32,7 +33,6 @@ const SlickCarousel = (props) => {
       {
         breakpoint: 620,
         settings: {
-          dots: true,
           slidesToShow: 1,
           infinite: true,
         },
