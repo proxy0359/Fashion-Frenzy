@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
 
@@ -10,6 +9,7 @@ const SlickCarousel = (props) => {
     slidesToShow: 4,
     variableWidth: true,
     infinite: true,
+    adaptiveHeight: true,
 
     nextArrow: <LeftArrow className="top-[35%]" />,
     prevArrow: <RightArrow />,
