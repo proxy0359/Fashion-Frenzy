@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="grid-cols-12 pb-14 lg:pb-18 mx-auto ">
+    <section className="grid-cols-12 pb-6 lg:pb-18 mx-auto ">
       <div className="flex items-end md:items-center col-span-4 md:col-span-12 h-[40rem] md:h-160 xl:h-202 relative mb-20">
         <div className="flex-shrink-0">
           <video

@@ -3,6 +3,7 @@ import { createRoutesFromElements, Route, Navigate } from 'react-router';
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../pages/Layout';
 import LandingPage from '../pages/LandingPage';
+import MensShop from '../pages/MensShop';
 import PageNotFound from '../components/errors/PageNotFound';
 
 const useRoutes = () => {
@@ -11,6 +12,7 @@ const useRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
+        <Route path="/men" element={<MensShop />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )

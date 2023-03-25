@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CardShop.css';
 import clothe1 from '../../../assets/heroSection1/image1.jpg';
 import { NavLink } from 'react-router-dom';
 
-const CardShop = ({ category, tagVersion, title, to, price, tags, img }) => {
+const CardShop = ({
+  category,
+  tagVersion,
+  title,
+  to,
+  price,
+  tags,
+  img,
+  img2,
+  onClick,
+}) => {
+  const [onHover, setOnHover] = useState(false);
+
+  const hoverHandler = () => {
+    setOnHover((hover) => !hover);
+  };
+
   return tagVersion ? (
-    <div className=" w-[280px] h-auto max-sm:m-auto mx-3 ">
+    <div className=" w-[280px]  h-auto max-sm:m-auto mx-3 ">
       <div className=" overflow-hidden">
         {/* IMAGE SHOULD HAVE A PROP  */}
         <img
-          src={clothe1}
-          alt="asdf"
-          className="w-[280px] h-[380px] hover:scale-105 transform ease-in-out duration-200  "
+          src={img ? (onHover ? img2 : img) : clothe1}
+          alt="clothes"
+          className="w-[280px] h-[380px] cursor-pointer max-sm:w-full max-sm:h-full hover:scale-105 transform ease-in-out duration-200  "
+          onMouseEnter={hoverHandler}
+          onMouseLeave={hoverHandler}
+          onClick={onClick}
         />
       </div>
 
