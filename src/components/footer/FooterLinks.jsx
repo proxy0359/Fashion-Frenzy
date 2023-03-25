@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import FooterSocials from './FooterSocials';
 
 const FooterLinks = () => {
+  const [socialDropDown, setSocialDropdown] = useState(false);
+
+  const dropDownHandler = () => {
+    setSocialDropdown((drop) => !drop);
+  };
+
   return (
     <ul className="flex-col text-xl list-none">
       <li className="mb-4">
@@ -18,6 +25,13 @@ const FooterLinks = () => {
         <NavLink to="legal" className="link">
           Legal
         </NavLink>
+      </li>
+      <li className="hidden max-md:block">
+        <FooterSocials
+          dropdown={true}
+          onClick={dropDownHandler}
+          showSocials={socialDropDown}
+        />
       </li>
     </ul>
   );

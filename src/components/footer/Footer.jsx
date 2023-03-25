@@ -2,6 +2,7 @@ import React from 'react';
 import FooterForm from './FooterForm';
 import { NavLink } from 'react-router-dom';
 import FooterLinks from './FooterLinks';
+import FooterSocials from './FooterSocials';
 
 const Footer = () => {
   return (
@@ -22,8 +23,18 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 max-md:col-span-8">
           <FooterLinks />
+        </div>
+        <div className="col-span-2 max-md:hidden">
+          <FooterSocials />
+        </div>
+        <div className="col-span-1 max-md:col-span-4  relative ">
+          <img
+            className="absolute right-0"
+            src="//cdn.shopify.com/s/files/1/1074/5128/t/665/assets/b-corp-logo.svg?v=41308094921497457851665393262"
+            alt="certified B corporation"
+          />
         </div>
       </div>
 
