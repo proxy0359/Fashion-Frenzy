@@ -28,8 +28,18 @@ const HomeSection3 = () => {
 
       {/* Two items Carousel */}
       <TwoItemsCarousel>
-        <TwoItemsCard img={item1} />
-        <TwoItemsCard img={item2} />
+        <TwoItemsCard
+          img={item1}
+          title="Lived & Loved"
+          description="Because the most sustainable product is the one you already own."
+          buttonTitle="Discover More"
+        />
+        <TwoItemsCard
+          img={item2}
+          title="Reskinned x Frenzy Fashion"
+          description="Pre-loved gear, ready for fresh adventures."
+          buttonTitle="Shop"
+        />
       </TwoItemsCarousel>
 
       <SlickCarousel className="mt-28">

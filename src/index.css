@@ -31,6 +31,26 @@ footer {
   width: 100%;
 }
 
+.ellipsis-1-line {
+  -webkit-line-clamp: 1;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis-2-line {
+  -webkit-line-clamp: 2;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .h1 {
   font-size: 3.125rem;
   line-height: 1.1909090909em;

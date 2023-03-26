@@ -15,10 +15,24 @@ const HomeSection1 = () => {
       </div>
       <div className="  w-full py-4 mb-10 h-full max-sm:mb-3  ">
         <SlickCarousel>
-          <CardShop category="Men's" />
-          <CardShop category="Women's" />
-          <CardShop category="Changing Robes" />
-          <CardShop category="New Arrivals" />
+          <CardShop
+            category="Men's"
+            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/vb1939784_SS22_spring_knits-1_360x.jpg?v=1675771125"
+            to="/men"
+          />
+          <CardShop
+            category="Women's"
+            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/vb1939927_SS22_spring_knits-37_360x.jpg?v=1675771125"
+            to="/women"
+          />
+          <CardShop
+            category="Changing Robes"
+            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/vb1935538_SS22_spring_accessories-95_360x.jpg?v=1675771124"
+          />
+          <CardShop
+            category="New Arrivals"
+            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/collection-header-new-arrivals_360x.jpg?v=1675771126"
+          />
           <CardShop category="New Arrivals" />
         </SlickCarousel>
       </div>

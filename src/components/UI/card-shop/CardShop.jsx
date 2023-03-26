@@ -60,11 +60,13 @@ const CardShop = ({
     <div className="lg:overflow-hidden w-[280px] h-auto max-sm:m-auto mx-3 ">
       <div className="hover:scale-105 transform ease-in-out duration-200">
         {/* IMAGE SHOULD HAVE A PROP  */}
-        <img
-          src={img ? img : clothe1}
-          alt="asdf"
-          className="w-[280px] h-[380px] "
-        />
+        <NavLink to={to}>
+          <img
+            src={img ? img : clothe1}
+            alt={title}
+            className="w-[280px] h-[380px] cursor-pointer "
+          />
+        </NavLink>
       </div>
       <div className="mt-2">
         <p className="mb-2 text-base">{title ? title : 'Shop'}</p>

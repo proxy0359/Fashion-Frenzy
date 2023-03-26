@@ -20,8 +20,8 @@ const HomeSection2 = () => {
           ></video>
           <div className="section2  z-10 absolute h-full">
             <div className="content mt-20  flex-shrink-0">
-              <h1 className="font-semibold w-7/12  text-white self-start max-lg:w-8/12 text-[40px] max-md:text-[25px]  max-sm:text-center max-sm:w-10/12">
-                Fashion is the armor to survive the reality of everyday life.
+              <h1 className="font-semibold w-4/12  text-white self-start max-lg:w-5/12 text-[40px] max-md:text-[25px]  max-sm:text-center max-sm:w-10/12">
+                Women Of The Sea Claiming Our Space
               </h1>
               <div className="flex mt-8 self-start flex-wrap max-sm:justify-center max-sm:pr-8">
                 <NavLink
