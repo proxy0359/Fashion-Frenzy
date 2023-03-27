@@ -30,6 +30,15 @@ section {
 footer {
   width: 100%;
 }
+.product-tag {
+  margin-bottom: 2px;
+  background-color: #e7ddbb;
+  display: flex;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  line-height: 1em;
+  margin-right: 2px;
+}
 
 .ellipsis-1-line {
   -webkit-line-clamp: 1;
@@ -63,7 +72,7 @@ footer {
   letter-spacing: 0.03125em;
   font-family: Helvetica Neue LT W05_55 Roman, Helvetica, sans-serif;
 }
-h3 {
+.h3 {
   font-size: 1.625rem;
   line-height: 1.2142857143em;
   letter-spacing: 0.02857142857em;
