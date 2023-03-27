@@ -24,20 +24,22 @@ const CardShop = ({
     <div className=" w-[280px]  h-auto max-sm:m-auto mx-3 ">
       <div className=" overflow-hidden">
         {/* IMAGE SHOULD HAVE A PROP  */}
-        <img
-          src={img ? (onHover ? img2 : img) : clothe1}
-          alt="clothes"
-          className="w-[280px] h-[380px] cursor-pointer max-sm:w-full max-sm:h-full hover:scale-105 transform ease-in-out duration-200  "
-          onMouseEnter={hoverHandler}
-          onMouseLeave={hoverHandler}
-          onClick={onClick}
-        />
+        <NavLink to={to}>
+          <img
+            src={img ? (onHover ? img2 : img) : clothe1}
+            alt="clothes"
+            className="w-[280px] h-[380px] cursor-pointer max-sm:w-full max-sm:h-full hover:scale-105 transform ease-in-out duration-200  "
+            onMouseEnter={hoverHandler}
+            onMouseLeave={hoverHandler}
+            onClick={onClick}
+          />
+        </NavLink>
       </div>
 
       {/* TAG FOR CARD */}
       <div className="flex items-start flex-wrap mb-4">
         {tags.map((tag) => (
-          <NavLink to={to}>
+          <NavLink to={to} key={tag.title}>
             <span className="product-tag">{tag.title} </span>
           </NavLink>
         ))}

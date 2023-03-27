@@ -11,7 +11,7 @@ const RadioCheckBox = ({ title, id, value }) => {
         id={id}
         className="hidden"
       />
-      <label className="ml-10 cursor-pointer" for={id}>
+      <label className="ml-10 cursor-pointer" htmlFor={id}>
         {title}
       </label>
     </span>

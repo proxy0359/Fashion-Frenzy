@@ -19,7 +19,7 @@ const MainShop = () => {
       </div>
       <div className="flex flex-wrap  ">
         {WOMEN_SHIRTS.map((item) => (
-          <div className="m-auto mb-8 ">
+          <div className="m-auto mb-8 " key={item.id}>
             <CardShop
               tagVersion={true}
               price={item.price}
@@ -27,6 +27,7 @@ const MainShop = () => {
               tags={item.tags}
               img={item.image1}
               img2={item.image2}
+              to={`/women/${item.id}`}
             />
           </div>
         ))}

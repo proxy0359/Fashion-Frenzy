@@ -15,7 +15,7 @@ const FooterForm = () => {
           type="email"
           name="email"
           placeholder="Your Email"
-          autocomplete="off"
+          autoComplete="off"
           className="w-full mb-5 p-4 border border-[black]  placeholder-[black] tracking-wider focus:outline-none"
         />
         <div className="flex  justify-between max-sm:flex-col mb-3">
