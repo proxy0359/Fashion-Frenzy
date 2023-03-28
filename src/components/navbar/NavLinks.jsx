@@ -6,6 +6,8 @@ import {
   faMagnifyingGlass,
   faBars,
   faXmark,
+  faChevronLeft,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import Cart from './cart/Cart';
 import './NavLinks.css';
@@ -20,7 +22,7 @@ const NavLinks = (props) => {
             className=" flex  nav-item pr-4  items-center h-full "
           >
             Men
-            <FontAwesomeIcon icon={faChevronDown} size="1x" className="ml-2" />
+            <FontAwesomeIcon icon={faChevronRight} size="1x" className="ml-2" />
           </NavLink>
         </li>
         <li className="pr-1 ">
@@ -29,7 +31,7 @@ const NavLinks = (props) => {
             className="flex  nav-item pr-4  items-center h-full"
           >
             Women
-            <FontAwesomeIcon icon={faChevronDown} size="1x" className="ml-2" />
+            <FontAwesomeIcon icon={faChevronRight} size="1x" className="ml-2" />
           </NavLink>
         </li>
         <li className="pr-1 ">
@@ -38,7 +40,7 @@ const NavLinks = (props) => {
             className=" flex  nav-item pr-4  items-center h-full"
           >
             Impact
-            <FontAwesomeIcon icon={faChevronDown} size="1x" className="ml-2" />
+            <FontAwesomeIcon icon={faChevronRight} size="1x" className="ml-2" />
           </NavLink>
         </li>
       </ul>

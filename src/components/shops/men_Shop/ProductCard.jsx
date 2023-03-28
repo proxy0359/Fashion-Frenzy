@@ -10,7 +10,11 @@ const ProductCard = ({ tags, img, title }) => {
           </span>
         ))}
       </div>
-      <img src={img} alt={title || ''} className="h-full w-9/12" />
+      <img
+        src={img}
+        alt={title || ''}
+        className="h-full w-9/12 max-sm:w-full"
+      />
     </div>
   );
 };
