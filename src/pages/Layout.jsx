@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import MainNav from '../components/navbar/MainNav';
 import Footer from '../components/footer/Footer';
+import ScrollToHash from '../helper/ScrollToHash';
 import { useLocation } from 'react-router';
 
 import { Outlet } from 'react-router';
@@ -17,6 +18,7 @@ const Layout = () => {
       </header>
       <main>
         <Outlet />
+        <ScrollToHash />
       </main>
       <Footer />
     </>
