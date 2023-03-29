@@ -6,7 +6,7 @@ import RightArrow from './icons/RightArrow';
 
 const SlickCarousel = (props) => {
   const settings = {
-    slidesToShow: 4,
+    slidesToShow: props.slidesToShow || 4,
     variableWidth: true,
     infinite: true,
     adaptiveHeight: true,

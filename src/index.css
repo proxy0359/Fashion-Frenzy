@@ -6,6 +6,9 @@
 :root {
   --mainThemeColor: #f6f6f6;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -76,6 +79,7 @@ footer {
   font-size: 1.625rem;
   line-height: 1.2142857143em;
   letter-spacing: 0.02857142857em;
+  font-weight: inherit;
 }
 
 .inset-0 {

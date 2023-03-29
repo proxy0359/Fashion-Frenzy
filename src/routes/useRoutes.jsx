@@ -4,6 +4,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../pages/Layout';
 import LandingPage from '../pages/LandingPage';
 
+import ImpactPage from '../pages/ImpactPage';
+
 // WOMEN IMPORTS
 
 import WomenProduct from '../components/shops/women_shop/product_page/Product';
@@ -26,6 +28,9 @@ const useRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
+
+        {/* IMPACT */}
+        <Route path="impact" element={<ImpactPage />} />
 
         {/* MEN's ROUTE */}
 
