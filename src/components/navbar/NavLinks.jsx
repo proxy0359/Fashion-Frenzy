@@ -44,6 +44,7 @@ const NavLinks = (props) => {
           </NavLink>
         </li>
       </ul>
+
       <ul className="flex ">
         <li className="flex  items-center">
           <FontAwesomeIcon
@@ -68,7 +69,7 @@ const NavLinks = (props) => {
             Account
           </NavLink>
         </li>
-        <li className="flex  items-center">
+        <li className="flex  items-center flex-shrink-0">
           <Cart />
         </li>
         <li className=" flex items-center lg:hidden ">

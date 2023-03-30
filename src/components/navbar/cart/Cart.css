@@ -14,5 +14,11 @@
   z-index: 2;
 }
 
+.number1 {
+  top: 8px;
+  left: 9px;
+  font-size: 14px;
+}
+
 @media (max-width: 880px) {
 }

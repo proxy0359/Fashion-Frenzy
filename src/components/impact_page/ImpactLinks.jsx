@@ -1,6 +1,4 @@
 import React, { useRef } from 'react';
-import ScrollToHash from '../../helper/ScrollToHash';
-import { Link } from 'react-router-dom';
 
 const ImpactLinks = ({ impact, sourceSustain, productDesign }) => {
   const scrollTo = (id) => {

@@ -72,7 +72,7 @@ const MenProduct = () => {
 
       {/* PRODUCT DESCRIPTION */}
       <div className="grid grid-cols-12 ml-10 mt-8">
-        <div className="col-span-5 max-sm:col-span-11">
+        <div className="col-span-5 max-sm:col-span-11 max-md:col-span-8">
           <ProductDescription />
         </div>
       </div>

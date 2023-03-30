@@ -37,7 +37,7 @@ const Impact = () => {
         />
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-5 max-md:col-span-10">
+        <div className="col-span-5 max-md:col-span-10 ">
           <h3 className="h3 ml-10 mt-20">
             The ocean's future is our future. That's why we're here - to inspire
             a love of the sea and protect it together. Our mission to have a

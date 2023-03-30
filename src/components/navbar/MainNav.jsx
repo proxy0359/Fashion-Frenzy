@@ -35,7 +35,7 @@ const MainNav = () => {
         <NavLinks openSide={sideHandler} sideActive={showSide} />
         <SideDrawer
           show={showSide}
-          className="  px-5 pt-8 pt-10 pb-12  overflow-y-scroll"
+          className="  px-5  pt-10 pb-12  overflow-y-scroll"
         >
           <AsideLinks onClick={sideHandler} />
         </SideDrawer>
