@@ -11,17 +11,23 @@ import './MainNav.css';
 const MainNav = () => {
   const [showSide, setShowSide] = useState(false);
 
+  const [showCartSide, setShowCartSide] = useState(false);
+
+  // HAMBURGER NAVBAR HANDLER
   const sideHandler = () => {
     setShowSide(!showSide);
   };
 
+  // CARTSIDE HANDLER
+  const cartSideHandler = () => {
+    setShowCartSide((side) => !side);
+  };
+
   return (
     <>
-      {showSide ? (
-        <>
-          <Backdrop onClick={sideHandler} />
-        </>
-      ) : null}
+      {/* Hamburger menu backdrop */}
+      {showSide ? <Backdrop onClick={sideHandler} /> : null}
+      {showCartSide ? <Backdrop onClick={cartSideHandler} /> : null}
 
       <nav className="flex nav max-lg:justify-between  ">
         <NavLink to="/" className=" max-sm:!flex-shrink shrink-0 ">
@@ -30,7 +36,10 @@ const MainNav = () => {
           </h1>
         </NavLink>
 
-        {/* ALL THE NAVIGATION LINKS */}
+        {/* CART DRAWER */}
+        <SideDrawer></SideDrawer>
+
+        {/* ALL THE NAVIGATION LINKS DRAWER*/}
 
         <NavLinks openSide={sideHandler} sideActive={showSide} />
         <SideDrawer
