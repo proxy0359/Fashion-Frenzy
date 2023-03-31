@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faChevronDown,
   faMagnifyingGlass,
   faBars,
   faXmark,
-  faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import Cart from './cart/Cart';
+import { useSelector } from 'react-redux';
 import './NavLinks.css';
 
 const NavLinks = (props) => {
+  const showCartActive = useSelector((state) => state.ui.showCart);
   return (
     <div className="flex justify-between  h-auto pr-4 w-full max-lg:w-auto">
       <ul className="flex max-lg:hidden ">
@@ -69,17 +69,21 @@ const NavLinks = (props) => {
             Account
           </NavLink>
         </li>
-        <li className="flex  items-center flex-shrink-0">
-          <Cart />
-        </li>
-        <li className=" flex items-center lg:hidden ">
-          <FontAwesomeIcon
-            icon={props.sideActive ? faXmark : faBars}
-            className="text-2xl pr-4  cursor-pointer w-7"
-            size="1x"
-            onClick={props.openSide}
-          />
-        </li>
+        {props.showSide ? null : (
+          <li className="flex  items-center flex-shrink-0">
+            <Cart />
+          </li>
+        )}
+        {showCartActive ? null : (
+          <li className=" flex items-center lg:hidden ">
+            <FontAwesomeIcon
+              icon={props.sideActive ? faXmark : faBars}
+              className="text-2xl pr-4  cursor-pointer w-7"
+              size="1x"
+              onClick={props.openSide}
+            />
+          </li>
+        )}
       </ul>
     </div>
   );

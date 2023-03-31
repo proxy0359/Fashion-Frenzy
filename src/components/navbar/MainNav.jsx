@@ -4,6 +4,10 @@ import NavLinks from './NavLinks';
 import Backdrop from '../UI/Backdrop';
 import SideDrawer from './SideDrawer';
 import AsideLinks from './AsideLinks';
+import { useSelector, useDispatch } from 'react-redux';
+import { UiAction } from '../../store/ui-slice';
+
+import CartAside from './cart/cart-aside/CartAside';
 
 import './MainNav.css';
 
@@ -11,7 +15,9 @@ import './MainNav.css';
 const MainNav = () => {
   const [showSide, setShowSide] = useState(false);
 
-  const [showCartSide, setShowCartSide] = useState(false);
+  const dispatch = useDispatch();
+
+  const showCart = useSelector((state) => state.ui.showCart);
 
   // HAMBURGER NAVBAR HANDLER
   const sideHandler = () => {
@@ -20,14 +26,14 @@ const MainNav = () => {
 
   // CARTSIDE HANDLER
   const cartSideHandler = () => {
-    setShowCartSide((side) => !side);
+    dispatch(UiAction.toggleCart());
   };
 
   return (
     <>
       {/* Hamburger menu backdrop */}
       {showSide ? <Backdrop onClick={sideHandler} /> : null}
-      {showCartSide ? <Backdrop onClick={cartSideHandler} /> : null}
+      {showCart ? <Backdrop onClick={cartSideHandler} /> : null}
 
       <nav className="flex nav max-lg:justify-between  ">
         <NavLink to="/" className=" max-sm:!flex-shrink shrink-0 ">
@@ -37,14 +43,20 @@ const MainNav = () => {
         </NavLink>
 
         {/* CART DRAWER */}
-        <SideDrawer></SideDrawer>
+        <SideDrawer show={showCart} className="z-[70]">
+          <CartAside />
+        </SideDrawer>
 
         {/* ALL THE NAVIGATION LINKS DRAWER*/}
 
-        <NavLinks openSide={sideHandler} sideActive={showSide} />
+        <NavLinks
+          openSide={sideHandler}
+          sideActive={showSide}
+          showSide={showSide}
+        />
         <SideDrawer
           show={showSide}
-          className="  px-5  pt-10 pb-12  overflow-y-scroll"
+          className=" z-[70]  px-5  pt-10 pb-12  overflow-y-scroll"
         >
           <AsideLinks onClick={sideHandler} />
         </SideDrawer>
