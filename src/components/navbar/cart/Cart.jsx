@@ -23,7 +23,13 @@ const Cart = () => {
           height="35"
         />
 
-        <span className="absolute number1">{amount}</span>
+        <span
+          className={`absolute number1 ${
+            amount.toString().length >= 2 ? '!left-[5px]' : ''
+          }`}
+        >
+          {amount}
+        </span>
       </span>
     </div>
   );

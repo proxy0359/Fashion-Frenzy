@@ -50,7 +50,9 @@ const CartAside = () => {
                 price={product.price}
                 size={product.size}
                 title={product.name}
-                amount={product.amount}
+                amount={product.totalAmount}
+                id={product.id}
+                product={product}
               />
             ))
           )}
