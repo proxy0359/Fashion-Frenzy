@@ -1,11 +1,12 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { UiAction } from '../../../store/ui-slice';
 
 import './Cart.css';
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const amount = useSelector((state) => state.cart.totalAmount);
 
   const showCartSide = () => {
     dispatch(UiAction.toggleCart());
@@ -22,7 +23,7 @@ const Cart = () => {
           height="35"
         />
 
-        <span className="absolute number1">0</span>
+        <span className="absolute number1">{amount}</span>
       </span>
     </div>
   );

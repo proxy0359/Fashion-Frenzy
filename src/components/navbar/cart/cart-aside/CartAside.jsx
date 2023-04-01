@@ -7,6 +7,7 @@ import './CartAside.css';
 
 const CartAside = () => {
   const dispatch = useDispatch();
+  const products = useSelector((state) => state.cart.products);
 
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
@@ -23,7 +24,7 @@ const CartAside = () => {
           <button onClick={closeCartSideHandler}>
             <img
               src="//cdn.shopify.com/s/files/1/1074/5128/t/665/assets/icon-close.svg?v=65803610500005314941665393263"
-              class="max-w-none"
+              className="max-w-none"
               loading="lazy"
               alt="Close"
               width="25"
@@ -37,24 +38,22 @@ const CartAside = () => {
         {/* PRODUCT ITEMS HERE */}
 
         <div className="col-span-12 max-h-[20rem] ">
-          <CartProductCard
-            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/collection-header-mens-new-arrivals_360x.jpg?v=1675771263"
-            price={2000}
-            size="S"
-            title="something"
-          />
-          <CartProductCard
-            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/collection-header-mens-new-arrivals_360x.jpg?v=1675771263"
-            price={2000}
-            size="S"
-            title="something"
-          />
-          <CartProductCard
-            img="https://cdn.shopify.com/s/files/1/1074/5128/collections/collection-header-mens-new-arrivals_360x.jpg?v=1675771263"
-            price={2000}
-            size="S"
-            title="something"
-          />
+          {products.length === 0 ? (
+            <div className="w-full  bg-white p-4">
+              <p className="text-xl">Your basket is empty.</p>
+            </div>
+          ) : (
+            products.map((product) => (
+              <CartProductCard
+                key={product.id}
+                img={product.image1}
+                price={product.price}
+                size={product.size}
+                title={product.name}
+                amount={product.amount}
+              />
+            ))
+          )}
         </div>
       </div>
       <div className="grid grid-cols-12 border-t-2 pt-4 border-black">

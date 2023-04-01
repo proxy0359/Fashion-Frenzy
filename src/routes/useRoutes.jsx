@@ -22,6 +22,8 @@ import MenProduct from '../components/shops/men_Shop/Product';
 
 import PageNotFound from '../components/errors/PageNotFound';
 
+// LOADERS
+
 const useRoutes = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(

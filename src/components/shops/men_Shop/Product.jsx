@@ -9,17 +9,31 @@ import ProductCard from './ProductCard';
 import ProductDescription from './ProductDescription';
 import Rating from '../../UI/rating/Rating';
 
+import { useDispatch } from 'react-redux';
+import { cartAction } from '../../../store/cart-slice';
+
 const MenProduct = () => {
-  const [rating, setRating] = useState(5);
+  const [rating, setRating] = useState(0);
   const [pickedSize, setPickedSize] = useState('');
+
+  const dispatch = useDispatch();
 
   const pickedSizeHandler = (size) => {
     setPickedSize(size);
   };
 
+  // TO GET THE ID
   const id = useParams().mId;
-  console.log(id);
+
   const product = MEN_SHIRTS.find((item) => item.id === id);
+
+  // ADD TO CART HANDLER FUNCTION
+  const addToCartHandler = (event) => {
+    event.preventDefault();
+
+    dispatch(cartAction.addItem({ product, size: pickedSize }));
+    console.log(pickedSize);
+  };
 
   return (
     <section className="max-sm:mt-14">
@@ -38,7 +52,7 @@ const MenProduct = () => {
           />
         </div>
         <div className="col-span-4 pt-10 pb-4  max-sm:col-span-10">
-          <form className="w-full h-full">
+          <form onSubmit={addToCartHandler} className="w-full h-full">
             {/* PRODUCT NAME */}
             <h3 className="h3 mb-4">{product.name}</h3>
 
@@ -60,6 +74,7 @@ const MenProduct = () => {
               <button
                 className="button my-4 max-md:my-16  w-max cursor-pointer bg-black text-white "
                 disabled={pickedSize ? false : true}
+                type="submit"
               >
                 {pickedSize
                   ? `Check Out : "${pickedSize}" size`

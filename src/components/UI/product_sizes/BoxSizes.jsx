@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BoxSizes.css';
 const BoxSizes = ({ sizes, picked }) => {
   const [onSelect, setOnSelect] = useState({ index: null, selected: '' });
 
+  useEffect(() => {
+    if (onSelect.selected.trim().length !== 0) {
+      picked(onSelect.selected);
+    } else {
+      picked(null);
+    }
+  }, [onSelect, picked]);
+
   const onSelectHandler = (index, size) => {
     setOnSelect({ index, selected: size });
+
+    // TO TOGGLE THE SELECTED BOX
     if (onSelect.index === index) {
       setOnSelect({ index: null, selected: '' });
     }
   };
-
-  if (onSelect.selected.trim().length !== 0) {
-    picked(onSelect.selected);
-  } else {
-    picked(null);
-  }
 
   return (
     <>

@@ -53,7 +53,7 @@ const Impact = () => {
           img="https://cdn.shopify.com/s/files/1/1074/5128/files/sustainability-history-featured_480x.jpg?v=1642055735"
           title="Our Story"
           category="It all starts with the sea"
-          description="Born over a decade ago from the needs of hardy British surfers, Finisterre designs functional and sustainable product for those that share a love of the sea."
+          description="Born over a decade ago from the needs of hardy British surfers, Fashion Frenzy designs functional and sustainable product for those that share a love of the sea."
         />
         <ImpactCard
           img="https://cdn.shopify.com/s/files/1/1074/5128/files/sustainability-b-corp-featured_480x.jpg?v=1642055735"
@@ -63,9 +63,9 @@ const Impact = () => {
         />
         <ImpactCard
           img="https://cdn.shopify.com/s/files/1/1074/5128/files/Foundation_480x.jpg?v=1642055443"
-          title="Finisterre Foundation"
+          title="Frenzy Fashion Foundation"
           category="Championing Equal Access"
-          description="Our Finisterre Foundation hopes to make a real difference in championing equal access to the ocean for everyone."
+          description="Our Frenzy Fashion Foundation hopes to make a real difference in championing equal access to the ocean for everyone."
         />
       </div>
 
@@ -90,18 +90,18 @@ const Impact = () => {
           img="https://cdn.shopify.com/s/files/1/1074/5128/files/leave-no-trace-flatlay-image-recycled-packaging-mobile_318b577b-c072-4c53-85a9-0c49b1bfe52c_480x.jpg?v=1647009389"
           title="Packaging"
           category="Leave No Trace"
-          description="We believe that single use is no use and in 2018 we made a commitment to eradicate single use, non-degradable plastic at Finisterre."
+          description="We believe that single use is no use and in 2018 we made a commitment to eradicate single use, non-degradable plastic at Frenzy Fashion."
         />
         <ImpactCard
           img="https://cdn.shopify.com/s/files/1/1074/5128/files/factories-of-finisterre-hero_480x.jpg?v=1647009469"
           title="Sustainability"
-          category="Factories of Finisterre"
-          description="Every Finisterre product tells the story of a hundred pairs of hands, of skills and craftsmanship, of complex interwoven supply chains."
+          category="Factories of Frenzy Fashion"
+          description="Every Frenzy Fashion product tells the story of a hundred pairs of hands, of skills and craftsmanship, of complex interwoven supply chains."
         />
         <ImpactCard
           img="https://cdn.shopify.com/s/files/1/1074/5128/files/fabric-of-finisterre-hero_480x.jpg?v=1647009535"
           title="Sustainability"
-          category="Fabric of Finisterre"
+          category="Fabric of Frenzy Fashion"
           description="It’s in our DNA. We take our commitment to sustainability seriously. We choose the right fabrics to create the best possible product."
         />
       </div>
