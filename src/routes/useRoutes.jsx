@@ -9,7 +9,7 @@ import ImpactPage from '../pages/ImpactPage';
 // WOMEN IMPORTS
 
 import WomenProduct from '../components/shops/women_shop/product_page/Product';
-import WomenShop from '../pages/womenShop';
+import WomenShop from '../pages/WomenShop';
 import { default as WomenMainShop } from '../components/shops/women_shop/MainShop';
 
 // MEN IMPORTS
