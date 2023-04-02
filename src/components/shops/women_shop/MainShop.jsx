@@ -22,7 +22,7 @@ const MainShop = () => {
           <div className="m-auto mb-8 " key={item.id}>
             <CardShop
               tagVersion={true}
-              price={item.price}
+              price={item.price.toLocaleString('en-US')}
               title={item.name}
               tags={item.tags}
               img={item.image1}

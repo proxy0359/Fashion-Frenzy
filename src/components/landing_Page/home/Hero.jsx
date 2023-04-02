@@ -22,13 +22,13 @@ const Hero = () => {
               </h1>
               <div className="flex mt-8 self-start flex-wrap max-sm:justify-center max-sm:pr-8">
                 <NavLink
-                  to="/shop/men"
+                  to="/men"
                   className=" block bg-[#e7ddbb] text-black  button min-w-[12.5rem] md:min-w-[13rem]   mb-4 lg:mb-0 mr-8  max-md:h-14 "
                 >
                   Men's New
                 </NavLink>
                 <NavLink
-                  to="/shop/women"
+                  to="/women"
                   className=" block bg-[#e7ddbb] text-black  button min-w-[12.5rem] md:min-w-[13rem]   mb-4 lg:mb-0 mr-8  max-md:h-14"
                 >
                   Women's New

@@ -26,16 +26,10 @@ const HomeSection2 = () => {
               </h1>
               <div className="flex mt-8 self-start flex-wrap max-sm:justify-center max-sm:pr-8">
                 <NavLink
-                  to="/shop/men"
+                  to="/impact"
                   className=" block bg-[#e7ddbb] text-black  button min-w-[12.5rem] md:min-w-[13rem]   mb-4 lg:mb-0 mr-8  max-md:h-14 "
                 >
-                  Men's New
-                </NavLink>
-                <NavLink
-                  to="/shop/women"
-                  className=" block bg-[#e7ddbb] text-black  button min-w-[12.5rem] md:min-w-[13rem]   mb-4 lg:mb-0 mr-8  max-md:h-14"
-                >
-                  Women's New
+                  Discover More
                 </NavLink>
               </div>
             </div>
@@ -60,6 +54,7 @@ const HomeSection2 = () => {
                 <CardShop
                   to="/men"
                   img={item.image1}
+                  img2={item.image2}
                   tagVersion={true}
                   tags={item.tags}
                   title={item.name}
@@ -71,6 +66,7 @@ const HomeSection2 = () => {
                   <CardShop
                     to="/women"
                     img={item.image1}
+                    img2={item.image2}
                     tagVersion={true}
                     tags={item.tags}
                     title={item.name}

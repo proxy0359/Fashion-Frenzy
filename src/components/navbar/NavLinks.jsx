@@ -46,21 +46,6 @@ const NavLinks = (props) => {
       </ul>
 
       <ul className="flex ">
-        <li className="flex  items-center">
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            size="1x"
-            className="text-2xl mr-4 cursor-pointer"
-          />
-        </li>
-        <li className="pr-1 max-lg:hidden">
-          <NavLink
-            to="/help"
-            className="flex  nav-item pr-4  items-center h-full pl-2"
-          >
-            Help
-          </NavLink>
-        </li>
         <li className="pr-1 max-lg:hidden ">
           <NavLink
             to="/login"

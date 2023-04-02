@@ -21,8 +21,9 @@ const MainShop = () => {
         {MEN_SHIRTS.map((item) => (
           <div className="m-auto mb-8 " key={item.id}>
             <CardShop
+              key={item.id}
               tagVersion={true}
-              price={item.price}
+              price={item.price.toLocaleString('en-US')}
               title={item.name}
               tags={item.tags}
               img={item.image1}
