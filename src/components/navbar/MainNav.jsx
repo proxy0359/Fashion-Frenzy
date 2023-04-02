@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import Backdrop from '../UI/Backdrop';
@@ -7,6 +7,8 @@ import AsideLinks from './AsideLinks';
 import { useSelector, useDispatch } from 'react-redux';
 import { UiAction } from '../../store/ui-slice';
 
+import { useLocation } from 'react-router-dom';
+
 import CartAside from './cart/cart-aside/CartAside';
 
 import './MainNav.css';
@@ -14,6 +16,7 @@ import './MainNav.css';
 // ----- NAVBAR -------------
 const MainNav = () => {
   const [showSide, setShowSide] = useState(false);
+  const location = useLocation();
 
   const dispatch = useDispatch();
 
@@ -28,6 +31,10 @@ const MainNav = () => {
   const cartSideHandler = () => {
     dispatch(UiAction.toggleCart());
   };
+
+  useEffect(() => {
+    setShowSide(false);
+  }, [location]);
 
   return (
     <>

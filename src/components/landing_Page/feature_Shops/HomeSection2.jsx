@@ -2,6 +2,7 @@ import React from 'react';
 import section2Video from '../../../assets/background-Videos/section2Video.mp4';
 import SlickCarousel from '../../UI/SlickCarousel';
 import CardShop from '../../UI/card-shop/CardShop';
+import { MEN_SHIRTS, WOMEN_SHIRTS } from '../../../assets/Dummy_Data';
 import './HomeSection2.css';
 
 import { NavLink } from 'react-router-dom';
@@ -54,36 +55,29 @@ const HomeSection2 = () => {
         {/* CAROUSEL FOR PRODUCTS */}
         <div className=" w-full py-4 mb-10 h-full max-sm:mb-4 ">
           <SlickCarousel>
-            <CardShop
-              tagVersion={true}
-              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
-              tags={[{ title: 'Best Seller' }]}
-              price={6750}
-            />
-            <CardShop
-              tagVersion={true}
-              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
-              tags={[{ title: 'Best Seller' }, { title: 'New Arrivals' }]}
-              price={5340}
-            />
-            <CardShop
-              tagVersion={true}
-              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
-              tags={[{ title: 'Best Seller' }]}
-              price={4560}
-            />
-            <CardShop
-              tagVersion={true}
-              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
-              tags={[{ title: 'Best Seller' }]}
-              price={3450}
-            />
-            <CardShop
-              tagVersion={true}
-              title="Nieuwland 2e Yulex® Long Sleeve Swimsuit"
-              tags={[{ title: 'Best Seller' }]}
-              price={3450}
-            />
+            {MEN_SHIRTS.slice(0, 2)
+              .map((item) => (
+                <CardShop
+                  to="/men"
+                  img={item.image1}
+                  tagVersion={true}
+                  tags={item.tags}
+                  title={item.name}
+                  price={item.price.toLocaleString('en-US')}
+                />
+              ))
+              .concat(
+                WOMEN_SHIRTS.slice(0, 2).map((item) => (
+                  <CardShop
+                    to="/women"
+                    img={item.image1}
+                    tagVersion={true}
+                    tags={item.tags}
+                    title={item.name}
+                    price={item.price.toLocaleString('en-US')}
+                  />
+                ))
+              )}
           </SlickCarousel>
         </div>
       </section>

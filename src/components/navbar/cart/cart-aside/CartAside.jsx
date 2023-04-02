@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { UiAction } from '../../../../store/ui-slice';
 import CartProductCard from './CartProductCard';
