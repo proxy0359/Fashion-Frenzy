@@ -5,6 +5,7 @@ import Layout from '../pages/Layout';
 import LandingPage from '../pages/LandingPage';
 
 import ImpactPage from '../pages/ImpactPage';
+import AboutPage from '../pages/AboutPage';
 
 // WOMEN IMPORTS
 
@@ -30,6 +31,7 @@ const useRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
 
         {/* IMPACT */}
         <Route path="impact" element={<ImpactPage />} />

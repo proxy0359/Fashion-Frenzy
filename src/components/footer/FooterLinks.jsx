@@ -12,7 +12,7 @@ const FooterLinks = () => {
   return (
     <ul className="flex-col text-xl list-none">
       <li className="mb-4">
-        <NavLink to="company" className="link">
+        <NavLink to="about" className="link">
           Company
         </NavLink>
       </li>
