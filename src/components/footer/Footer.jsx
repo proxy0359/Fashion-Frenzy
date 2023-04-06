@@ -16,7 +16,7 @@ const Footer = () => {
             <p className="col-span-8">
               By signing up, you agree to Fashion Frenzy sending you marketing
               communications and accept our Privacy Policy.&nbsp;
-              <NavLink to="/terms-and-conditions" className="link">
+              <NavLink to="/terms-and-condition" className="link">
                 *Click here for offer terms and conditions.
               </NavLink>
               &nbsp;

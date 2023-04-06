@@ -22,7 +22,7 @@ const FooterLinks = () => {
         </NavLink>
       </li>
       <li className="mb-4">
-        <NavLink to="legal" className="link">
+        <NavLink to="terms-and-condition" className="link">
           Legal
         </NavLink>
       </li>

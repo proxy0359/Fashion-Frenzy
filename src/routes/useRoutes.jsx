@@ -6,6 +6,9 @@ import LandingPage from '../pages/LandingPage';
 
 import ImpactPage from '../pages/ImpactPage';
 
+// LEGAL IMPORTS
+import TermsAndConditions from '../pages/TermsAndConditions';
+
 // SUPPORT IMPORTS
 import SupportPage from '../pages/SupportPage';
 import Contact from '../components/Customer_support/Contact';
@@ -40,6 +43,7 @@ const useRoutes = () => {
         <Route index element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="terms-and-condition" element={<TermsAndConditions />} />
 
         {/* IMPACT */}
         <Route path="impact" element={<ImpactPage />} />
