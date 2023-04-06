@@ -54,6 +54,14 @@ const NavLinks = (props) => {
             Account
           </NavLink>
         </li>
+        <li className="pr-1 max-lg:hidden ">
+          <NavLink
+            to="/support/contact"
+            className="flex  nav-item pr-4  items-center h-full"
+          >
+            Help
+          </NavLink>
+        </li>
         {props.showSide ? null : (
           <li className="flex  items-center flex-shrink-0">
             <Cart />

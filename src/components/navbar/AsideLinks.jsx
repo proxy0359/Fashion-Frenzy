@@ -34,7 +34,7 @@ const AsideLinks = ({ onClick }) => {
       <ul className="flex-col ">
         <li className="mb-4">
           <NavLink
-            to="/company"
+            to="/about"
             className="flex justify-between text-lg"
             onClick={onClick}
           >
@@ -44,11 +44,21 @@ const AsideLinks = ({ onClick }) => {
 
         <li className="mb-4">
           <NavLink
-            to="/customer-support"
+            to="/support/contact"
             className="flex justify-between text-lg "
             onClick={onClick}
           >
             Customer Support
+            <FontAwesomeIcon icon={faArrowRight} className="text-2xl" />
+          </NavLink>
+        </li>
+        <li className="mb-4">
+          <NavLink
+            to="/impact"
+            className="flex justify-between text-lg "
+            onClick={onClick}
+          >
+            Impact
             <FontAwesomeIcon icon={faArrowRight} className="text-2xl" />
           </NavLink>
         </li>

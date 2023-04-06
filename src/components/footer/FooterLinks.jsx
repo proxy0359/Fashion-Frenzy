@@ -17,7 +17,7 @@ const FooterLinks = () => {
         </NavLink>
       </li>
       <li className=" mb-4 flex-shrink-0 w-max">
-        <NavLink to="customer-support" className="link ">
+        <NavLink to="support" className="link ">
           Customer Support
         </NavLink>
       </li>

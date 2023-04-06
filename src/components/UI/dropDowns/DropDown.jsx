@@ -10,16 +10,19 @@ const DropDown = ({ title, items }) => {
   const dropdownHandler = () => setDropdown((dropdown) => !dropdown);
 
   return (
-    <div className="bg-white text-black py-4">
-      <div className="  flex justify-between">
-        <p>{title}</p>
+    <div className="bg-white text-black  w-full mb-4 ">
+      <button
+        className=" flex justify-between p-8 w-full"
+        onClick={dropdownHandler}
+      >
+        {title}
         {dropDown ? (
           <FontAwesomeIcon icon={faX} />
         ) : (
           <FontAwesomeIcon icon={faPlus} />
         )}
-      </div>
-      {dropDown ? <DropDownItems items={props.items} /> : null}
+      </button>
+      {dropDown ? <DropDownItems items={items} /> : null}
     </div>
   );
 };

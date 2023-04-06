@@ -131,6 +131,10 @@ footer {
   --tw-text-opacity: 1;
   color: rgba(56, 73, 114, var(--tw-text-opacity));
 }
+.bg-richBlack {
+  --tw-bg-opacity: 1;
+  background-color: rgba(1, 11, 19, var(--tw-bg-opacity));
+}
 
 /* DRAWER */
 

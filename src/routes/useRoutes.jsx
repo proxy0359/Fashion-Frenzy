@@ -5,6 +5,14 @@ import Layout from '../pages/Layout';
 import LandingPage from '../pages/LandingPage';
 
 import ImpactPage from '../pages/ImpactPage';
+
+// SUPPORT IMPORTS
+import SupportPage from '../pages/SupportPage';
+import Contact from '../components/Customer_support/Contact';
+import Faqs from '../components/Customer_support/Faqs';
+import ProductCare from '../components/Customer_support/ProductCare';
+
+// ABOUT IMPORT
 import AboutPage from '../pages/AboutPage';
 
 // WOMEN IMPORTS
@@ -35,6 +43,13 @@ const useRoutes = () => {
 
         {/* IMPACT */}
         <Route path="impact" element={<ImpactPage />} />
+
+        {/* SUPPORTS ROUTES */}
+        <Route path="/support/*" element={<SupportPage />}>
+          <Route path="contact" element={<Contact />} />
+          <Route path="faqs" element={<Faqs />} />
+          <Route path="product&repairs" element={<ProductCare />} />
+        </Route>
 
         {/* MEN's ROUTE */}
 
