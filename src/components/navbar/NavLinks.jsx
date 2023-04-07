@@ -48,7 +48,7 @@ const NavLinks = (props) => {
       <ul className="flex ">
         <li className="pr-1 max-lg:hidden ">
           <NavLink
-            to="/login"
+            to="/account"
             className="flex  nav-item pr-4  items-center h-full"
           >
             Account
