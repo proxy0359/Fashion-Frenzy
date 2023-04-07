@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FooterForm from './FooterForm';
 import { NavLink } from 'react-router-dom';
 import FooterLinks from './FooterLinks';
 import FooterSocials from './FooterSocials';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
   return (

@@ -52,6 +52,7 @@ const HomeSection2 = () => {
             {MEN_SHIRTS.slice(0, 2)
               .map((item) => (
                 <CardShop
+                  key={item.id}
                   to="/men"
                   img={item.image1}
                   img2={item.image2}
@@ -64,6 +65,7 @@ const HomeSection2 = () => {
               .concat(
                 WOMEN_SHIRTS.slice(0, 2).map((item) => (
                   <CardShop
+                    key={item.id}
                     to="/women"
                     img={item.image1}
                     img2={item.image2}

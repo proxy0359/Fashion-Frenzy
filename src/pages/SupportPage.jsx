@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import CustomerSupport from '../components/Customer_support/CustomerSupport';
-import { Outlet, useNavigate } from 'react-router';
+import { Outlet } from 'react-router';
 
 const SupportPage = () => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    navigate('contact');
-  }, []);
   return (
     <>
       <CustomerSupport>

@@ -1,5 +1,10 @@
-import React from 'react';
-import { createRoutesFromElements, Route, Navigate } from 'react-router';
+import React, { useEffect } from 'react';
+import {
+  createRoutesFromElements,
+  Route,
+  Navigate,
+  useLocation,
+} from 'react-router';
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../pages/Layout';
 import LandingPage from '../pages/LandingPage';
@@ -42,14 +47,16 @@ const useRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
+
+        <Route path="/terms-and-condition" element={<TermsAndConditions />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="terms-and-condition" element={<TermsAndConditions />} />
 
         {/* IMPACT */}
-        <Route path="impact" element={<ImpactPage />} />
+        <Route path="/impact" element={<ImpactPage />} />
 
         {/* SUPPORTS ROUTES */}
         <Route path="/support/*" element={<SupportPage />}>
+          <Route index element={<Navigate to="contact" />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faqs" element={<Faqs />} />
           <Route path="product&repairs" element={<ProductCare />} />
