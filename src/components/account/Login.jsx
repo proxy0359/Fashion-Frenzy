@@ -1,11 +1,13 @@
 import React from 'react';
+import LoginForm from './LoginForm';
 
 const Login = () => {
   return (
     <div className="grid grid-cols-12 pt-2 pl-8 max-lg:pl-4">
       {/* ALREADY REGISTERED */}
-      <div className="col-span-6">
-        <h1 className="h1 ">Already Registered?</h1>
+      <div className="col-span-6 ">
+        <h1 className="h1 mb-10 ">Already Registered?</h1>
+        <LoginForm />
       </div>
       {/* LINE GAP */}
       <div className="col-span-1">
