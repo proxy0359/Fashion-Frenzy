@@ -14,6 +14,7 @@ import ImpactPage from '../pages/ImpactPage';
 // ACCOUNT IMPORTS
 import AccountPage from '../pages/AccountPage';
 import Login from '../components/account/Login';
+import Register from '../components/account/Register';
 
 // LEGAL IMPORTS
 import TermsAndConditions from '../pages/TermsAndConditions';
@@ -58,6 +59,7 @@ const useRoutes = () => {
         <Route path="/account/*" element={<AccountPage />}>
           <Route index element={<Navigate to="login" />} />
           <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
 
         {/* IMPACT */}

@@ -12,7 +12,7 @@ const Input = ({ id, label, placeholder, name, className, type }) => {
         type={type}
         id={id}
         name={name}
-        className={`${className} w-10/12 mb-5 p-4 border border-[black] bg-transparent  placeholder-[black] tracking-wider  focus:outline-none`}
+        className={`${className} w-10/12 mb-10 p-4 border border-[black] bg-transparent  placeholder-[black] tracking-wider  focus:outline-none`}
         placeholder={placeholder}
         {...register(name)}
       />
