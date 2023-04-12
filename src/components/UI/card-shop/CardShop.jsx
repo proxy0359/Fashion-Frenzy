@@ -47,7 +47,7 @@ const CardShop = ({
 
       {/* NAME OR TITLE OF THE CARD */}
       <div className="mt-2">
-        <p className="mb-2 mt-2 text-[19px] font-light">{title}</p>
+        <p className=" mt-2 text-[19px] font-light">{title}</p>
 
         <NavLink to="/shop/men" className="link text-[1.6rem]">
           {/* TITLE FOR THE CART SHOP EX. (MEN , WOMEN etc...) */}

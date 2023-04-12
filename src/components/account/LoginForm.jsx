@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import Input from '../UI/form/Input';
 
-import { FormProvider, useForm, useFormContext } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { loginSchema } from '../../schema/LOGIN_SCHEMA';
+
+import FormError from '../UI/error/FormError';
+
 const LoginForm = () => {
   const methods = useForm({ resolver: yupResolver(loginSchema) });
+
+  const { formState, reset } = methods;
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset();
+    }
+  }, [formState, reset]);
 
   const error = methods.formState.errors;
 
@@ -20,8 +32,9 @@ const LoginForm = () => {
         onSubmit={methods.handleSubmit(signInSubmitHandler)}
         className="block"
       >
-        {error.email ? <p>{error.email.message}</p> : null}
+        <h1 className="h1 mb-10 ">Already Registered?</h1>
 
+        <FormError errorTrue={error.email} />
         <Input
           type="text"
           label="Email"
@@ -29,7 +42,9 @@ const LoginForm = () => {
           name="email"
           placeholder="Email"
         />
-        {}
+
+        <FormError errorTrue={error.password} />
+
         <Input
           type="text"
           label="Password"
@@ -38,7 +53,10 @@ const LoginForm = () => {
           placeholder="Password"
         />
 
-        <NavLink to="/account/recover" className="link  mb-10 block w-fit">
+        <NavLink
+          to="/account/login/recover"
+          className="link  mb-10 block w-fit"
+        >
           Forgot your password
         </NavLink>
 

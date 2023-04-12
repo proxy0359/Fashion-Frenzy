@@ -13,8 +13,10 @@ import ImpactPage from '../pages/ImpactPage';
 
 // ACCOUNT IMPORTS
 import AccountPage from '../pages/AccountPage';
-import Login from '../components/account/Login';
+import LoginForm from '../components/account/LoginForm';
+import ForgotPassword from '../components/account/ForgotPassword';
 import Register from '../components/account/Register';
+import LoginPage from '../pages/LoginPage';
 
 // LEGAL IMPORTS
 import TermsAndConditions from '../pages/TermsAndConditions';
@@ -58,7 +60,10 @@ const useRoutes = () => {
 
         <Route path="/account/*" element={<AccountPage />}>
           <Route index element={<Navigate to="login" />} />
-          <Route path="login" element={<Login />} />
+          <Route path="login" element={<LoginPage />}>
+            <Route index element={<LoginForm />} />
+            <Route path="recover" element={<ForgotPassword />} />
+          </Route>
           <Route path="register" element={<Register />} />
         </Route>
 
