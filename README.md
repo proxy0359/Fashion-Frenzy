@@ -17,8 +17,8 @@ To clone this project, follow the instructions below
 
  1.   Clone the repository by running git clone https://github.com/{your-username}/Fashion-Frenzy.git.
   2.  Navigate to the root folder of the project.
-   3. Run npm install to install the necessary dependencies.
-   4. Run npm run dev to start the development server.
+   3. Run `npm install` to install the necessary dependencies.
+   4. Run `npm run dev` to start the development server.
 
 ## Contribution
 
