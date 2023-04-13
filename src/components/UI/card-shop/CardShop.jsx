@@ -49,7 +49,7 @@ const CardShop = ({
       <div className="mt-2">
         <p className=" mt-2 text-[19px] font-light">{title}</p>
 
-        <NavLink to="/shop/men" className="link text-[1.6rem]">
+        <NavLink to={to} className="link text-[1.6rem]">
           {/* TITLE FOR THE CART SHOP EX. (MEN , WOMEN etc...) */}
           {category}
         </NavLink>
@@ -73,7 +73,7 @@ const CardShop = ({
       <div className="mt-2">
         <p className="mb-2 text-base">{title ? title : 'Shop'}</p>
 
-        <NavLink to="/shop/men" className="link text-[1.6rem]">
+        <NavLink to={to} className="link text-[1.6rem]">
           {/* TITLE FOR THE CART SHOP EX. (MEN , WOMEN etc...) */}
           {category}
         </NavLink>

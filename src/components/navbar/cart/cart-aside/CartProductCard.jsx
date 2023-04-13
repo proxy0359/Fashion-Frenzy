@@ -19,7 +19,7 @@ const CartProductCard = ({ img, title, price, size, amount, id, product }) => {
   };
 
   return (
-    <div className="grid grid-cols-12 w-full mb-2 relative overflow-hidden ">
+    <div className="grid grid-cols-12 w-full mb-2 relative overflow-hidden border border-sky-500 p-3">
       <div className="col-span-3">
         <img src={img} alt={title} className="w-[95%]" />
       </div>
@@ -28,7 +28,7 @@ const CartProductCard = ({ img, title, price, size, amount, id, product }) => {
         <p className="text-purpleNavy">₱{price.toLocaleString()}</p>
         <p>Size: {size}</p>
 
-        <div className="mt-10 flex justify-center w-min items-center border border-solid border-black">
+        <div className="mt-10 flex justify-center w-min items-center border border-solid border-black mb-4">
           <button className="text-lg w-8 h-8 mr-1" onClick={removeItemHandler}>
             -
           </button>

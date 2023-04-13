@@ -2,7 +2,7 @@ export const MEN_SHIRTS = [
   {
     id: 's1',
     name: 'Eddystone Shirt',
-    price: 12,
+    price: 14230.0,
     tags: [{ title: 'New Arrivals' }],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
     image1:

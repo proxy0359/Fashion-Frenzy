@@ -19,7 +19,7 @@ const MainShop = () => {
       </div>
       <div className="flex flex-wrap  ">
         {MEN_SHIRTS.map((item) => (
-          <div className="m-auto mb-8 " key={item.id}>
+          <div className="m-auto mb-8  " key={item.id}>
             <CardShop
               key={item.id}
               tagVersion={true}
