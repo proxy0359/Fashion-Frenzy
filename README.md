@@ -15,7 +15,7 @@ This project is an E-commerce website inspired by the minimalist design of Finis
 
 To clone this project, follow the instructions below
 
- 1.   Clone the repository by running git clone https://github.com/proxy0359/Fashion-Frenzy
+ 1.   Clone the repository by running `git clone https://github.com/proxy0359/Fashion-Frenzy`
   2.  Navigate to the root folder of the project.
    3. Run `npm install` to install the necessary dependencies.
    4. Run `npm run dev` to start the development server.
