@@ -53,11 +53,17 @@ const useRoutes = () => {
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/home" />} />
+
+        {/* HOME PAGE ROUTE */}
         <Route path="/home" element={<LandingPage />} />
 
+        {/* TERMS AND CONDITIONS ROUTE */}
         <Route path="/terms-and-condition" element={<TermsAndConditions />} />
+
+        {/* ABOUT ROUTE */}
         <Route path="/about" element={<AboutPage />} />
 
+        {/* ACCOUNT ROUTE */}
         <Route path="/account/*" element={<AccountPage />}>
           <Route index element={<Navigate to="login" />} />
           <Route path="login" element={<LoginPage />}>
@@ -67,7 +73,7 @@ const useRoutes = () => {
           <Route path="register" element={<Register />} />
         </Route>
 
-        {/* IMPACT */}
+        {/* IMPACT ROUTE*/}
         <Route path="/impact" element={<ImpactPage />} />
 
         {/* SUPPORTS ROUTES */}
