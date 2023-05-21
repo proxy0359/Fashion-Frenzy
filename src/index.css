@@ -89,6 +89,12 @@ footer {
   left: 0;
 }
 
+.modal-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* TRANSITIONS  */
 .slide-in-right-enter {
   transform: translateZ(-100%);
